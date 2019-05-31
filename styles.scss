@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.navbar {
+  background: #01134E;
+  max-width: 80px;
+  padding: 18px 22px 18px 23px;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin-bottom: 65px;
+}
+
+.nav-elements:hover .hover {
+  display: block;
+}
+
+.hover {
+  position: absolute;
+  width: 4px;
+  height: 48px;
+  display: none;
+  background: #0AD69C;
+  right: 45px;
+  top: -12px;
+}
+
+.active {
+  position: absolute;
+  width: 4px;
+  height: 48px;
+  display: block;
+  background: #0AD69C;
+  right: 45px;
+  top: -12px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-elements {
+    margin-bottom: 50px;
+    position: relative;
+
+    sup {
+      position: absolute;
+      top: -10px;
+      left: 9px;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px 40px 16px;
+  box-sizing: border-box;
+  border-bottom: 3px solid #DAE4F2;
+}
+
+.breadcrumbs {
+  display: flex;
+  .item {
+    margin-right: 14px;
+  }
+  .separator {
+    transform: translateY(-15%);
+  }
+  &-item {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 0.685714px;
+    text-decoration: none;
+    color: #252F48;
+  }
+}
+
+.user {
+  display: flex;
+  cursor: pointer;
+  &-item {
+    margin-right: 9px;
+  }
+
+  &-image {
+    width: 22px;
+    height: 22px;
+  }
+
+  &-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #252F48;
+  }
+
+  &-details {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    &::after {
+      content: '';
+      width: 1px;
+      height: 10px;
+      position: absolute;
+      display: block;
+      background-color: #01134E;
+      transform: rotate(-45deg);
+      top: 3px;
+      left: 0px;
+    }
+    &::before {
+      content: '';
+      width: 1px;
+      height: 10px;
+      position: absolute;
+      display: block;
+      background-color: #01134E;
+      transform: rotate(45deg);
+      top: 3px;
+      right: -8px;
+    }
+  }
+}
+
+.chat {
+  background-color: #F7F9FC;;
+  box-shadow: 0 0 30px rgba(153, 163, 174, 0.06);
+  border-radius: 4px;
+  padding: 42px 46px 0;
+  &-window {
+    display: flex;
+  }
+
+  &-users {
+    width: 300px;
+    background: #F7F9FC;
+    border-right: 1px solid #EDF0F4;
+    .background {
+      background-color: #FFFFFF;
+    }
+
+    .shadow {
+      box-shadow: 0 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15);
+    }
+
+    &-user {
+      display: flex;
+      padding: 22px 10px 22px 21px;
+      &-image {
+        margin-right: 14px;
+      }
+      &-description {
+        &-name {
+          font-family: "Exo 2";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.571429px;
+          color: #01134E;
+          margin-bottom: 15px;
+        }
+
+        &-message {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 18px;
+          color: #252F48;
+          mix-blend-mode: normal;
+          opacity: 0.43;
+        }
+      }
+      &-time {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #9BA0AD;
+      }
+    }
+  }
+  &-one {
+    width: 85%;
+    &-input {
+      background-color: white;
+      display: flex;
+      border-bottom: 1px solid #F5F6F9;
+      label {
+        padding: 20px;
+      }
+      #search {
+        width: 100%;
+        border: none;
+        background: none;
+      }
+    }
+    &-text {
+      background: white;
+      height: 609px;
+      overflow-y: scroll;
+      &-chating {
+        height: 800px;
+        margin: 0 41px 0 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .me {
+          justify-content: flex-end;
+        }
+
+        &-date {
+          font-family: "Exo 2";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: #CACED9;
+          text-align: center;
+          margin-bottom: 91px;
+        }
+
+        &-message {
+          display: flex;
+          margin-bottom: 19px;
+
+          img {
+            width: 36px;
+            height: 36px;
+            align-self: end;
+            margin-right: 11px;
+          }
+
+          &-text {
+            width: 300px;
+            padding: 12px 20px 12px 14px;
+            background: #F7F9FC;
+            border-radius: 5px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: #222428;
+          }
+        }
+      }
+    }
+    &-textarea {
+      display: flex;
+      background-color: white;
+      padding: 13px 20px 12px 31px;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(153, 163, 174, 0.146541);
+      &-buttons {
+        display: flex;
+      }
+
+      &-message {
+        border: none;
+        background-color: white;
+        height: 42px;
+        width: 100%;
+      }
+
+      &-emoji {
+        margin-right: 30px;
+        cursor: pointer;
+      }
+
+      svg {
+        vertical-align: middle;
+      }
+
+      label {
+        cursor: pointer;
+        margin-right: 30px;
+      }
+
+      &-file {
+        border: none;
+        background-color: white;
+        display: none;
+      }
+
+      &-send {
+        border: none;
+        background-color: white;
+        box-shadow: 0 0 15px rgba(153, 163, 174, 0.259256);
+        border-radius: 7px;
+        padding: 7px;
+        cursor: pointer;
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    background: #F5F6F7;
+    mix-blend-mode: normal;
+    opacity: 0.05;
+    border-radius: 4px;
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #DEE4F1;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    border-radius: 4px;
+    width: 8px;
+  }
+}
+
+.index {
+  background-color: #0AD69C;
+  border-radius: 100%;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  transform: translateY(-5px);
+}
+
+.org-index {
+  background: #2A74DB;
+  width: 19px;
+  height: 19px;
+  border-radius: 100%;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
